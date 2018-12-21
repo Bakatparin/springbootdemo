@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: dev
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/hstest?characterEncoding=utf8&useSSL=false
+    username: root
+    password: 123456
+
+  jpa:
+    hibernate:
+      ddl-auto: update  #create：每次删除表 然后重新创建  update：第一次创建表  create-drop:应用停止时删除表
+    show-sql: true
+

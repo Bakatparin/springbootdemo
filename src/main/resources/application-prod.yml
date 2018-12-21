@@ -1,0 +1,18 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+server:
+  servlet:
+    context-path: /prod
+  port: 8081
+
+#自定义属性
+author:
+  name: Bakatparin-prod
+  age: 23-prod
+
+#自定义属性
+content: "生产作者：${author.name},年龄：${author.age}"

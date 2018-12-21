@@ -1,0 +1,18 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+
+#server:
+#  servlet:
+#    context-path: /springbootdemo
+#  port: 8080
+
+#自定义属性
+author:
+  name: Bakatparin-dev
+  age: 23-dev
+
+#自定义属性
+content: "开发作者：${author.name},年龄：${author.age}"

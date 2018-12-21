@@ -1,0 +1,9 @@
+#去除jsp前后坠
+spring.mvc.view.prefix=/WEB-INF/jsp/
+spring.mvc.view.suffix=.jsp
+
+#端口配置
+server.port=8081
+#项目路径
+server.servlet.context-path=/springbootdemo
+
