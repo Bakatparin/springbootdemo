@@ -15,8 +15,9 @@ public class JedisDemo {
 
     @GetMapping("/jedis/test1")
     public String test1(){
-        //Jedis jedis = new Jedis("192.168.197.130",6379);//虚拟机地址
+        //Jedis jedis = new Jedis("192.168.197.130",6379);
         Jedis jedis = new Jedis("47.107.87.79",6379);//阿里云地址
+        //Jedis jedis =new Jedis("192.168.10.226",6371);//192.168.10.226 -p 6371
         jedis.set("login","root");
         jedis.set("password","haha5206.");
         System.out.println(jedis.get("name"));

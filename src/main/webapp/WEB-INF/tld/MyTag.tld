@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>myshortname</short-name>
+    <uri>http://mycompany.com</uri>
+
+    <!-- Invoke 'Generate' action to add tags or functions -->
+
+    <tag>
+        <name>hello</name>   <!-- 标签在jsp中使用名称 -->
+        <tag-class>com.example.springbootdemo.tag.HelloTag</tag-class><!-- 标签指向的class文件 -->
+        <body-content>empty</body-content><!-- 标签内容为空 -->
+    </tag>
+
+
+
+    <!--
+        body-content元素取值：empty、JSP、scriptless和tagdependent
+
+        empt：表示没有标签体
+
+        JSP：表示标签体可以包含JSP代码
+
+        scriptless：表示标签体可以包含EL表达式和JSP动作元素，但不能包含JSP的脚本元素
+
+        tagdependent：表示标签体交由标签本身去解析处理。即在标签体中所写的任何代码都会原封不动地传给标签处理器
+    -->
+    <tag>
+        <!--字母转大写-->
+        <name>toUpperCase</name>
+        <tag-class>com.example.springbootdemo.tag.ToUpperCaseTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>message</name>
+        </attribute>
+    </tag>
+
+    <tag>
+        <!--字母转小写-->
+        <name>toLowerCase</name>
+        <tag-class>com.example.springbootdemo.tag.ToLowerCaseTag</tag-class>
+        <body-content>scriptless</body-content>
+        <attribute>
+            <name>message</name>
+        </attribute>
+    </tag>
+</taglib>

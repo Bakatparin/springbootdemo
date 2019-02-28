@@ -256,9 +256,10 @@ public class SpringbootdemoApplication {
                     l.add(imgName);
                 }
             }
+
             System.out.println(s);
             System.out.println(l);
-            } catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         } catch (InvalidFormatException e) {
             e.printStackTrace();
